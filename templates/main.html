@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL shortener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<nav>
+    <div class="navbar"></div>
+</nav>
+<div class="container">
+    <div class="title">
+        <h1>This is URL Shortener was created with Flask</h1>
+    </div>
+    {% if message %}
+    <div class="message">
+        <h4>{{ message }}</h4>
+    </div>
+    {% endif %}
+    <div class="form">
+        <form action="/" method="post">
+        <input type="text" placeholder="Type a URL" name="url" autocomplete="off"><br>
+        <button type="submit">Shorten</button>
+    </form>
+    </div>
+    {% if URL %}
+    <div class="url-show">
+        <h4>Short</h4>
+        <p><a href="{{ URL.original_url }}" target="_blank">{{ URL.short_url }}</a></p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

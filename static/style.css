@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, sans-serif
+}
+
+.navbar {
+    height: 5em;
+    width: 100%;
+    background: #545B6C;
+    color: white
+}
+
+.container {
+    margin: 30px 30px;
+    text-align: center
+}
+
+.title {
+    padding: 10px 10px
+}
+
+.form form{
+    padding: 25px 25px;
+    height: 50px;
+}
+
+.form input {
+    padding: 10px 10px;
+    height: 30px;
+    width: 300px;
+    border-radius: 30px;
+    border: 1px solid #545B6C
+}
+
+.form input:focus {
+    outline: none
+}
+
+.form button {
+    background: #545B6C;
+    color: white;
+    height: 30px;
+    width: 80px;
+    border-radius: 20px;
+    margin: 10px 15px;
+    border-style: none
+}
+
+.url-show {
+    margin: 3em 3em;
+    line-height: 1.6em
+}
+
+.url-show a {
+    color: blue;
+    text-decoration: none
+}
