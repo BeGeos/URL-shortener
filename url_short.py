@@ -31,10 +31,14 @@ def main():
     if request.method == 'POST':
         url = request.form['url']
         if is_valid(url):
-            short = url_generate(url)
-            new = URLs(original_url=url, short_url=short)
-            db.session.add(new)
-            db.session.commit()
+            check = URLs.query.filter_by(original_url=url).first()
+            if check:
+                new = check
+            else:
+                short = url_generate(url)
+                new = URLs(original_url=url, short_url=short)
+                db.session.add(new)
+                db.session.commit()
             return render_template('main.html', URL=new)
         return render_template('main.html', name='main', message='URL not found')
 
