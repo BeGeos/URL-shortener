@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>URL shortener</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 <nav>
-    <div class="navbar"></div>
+    <div class="navbar">
+      <div class="nav-title">
+        <h1><a href="#" style="text-decoration: none; color: white">Flask(URL)</a></h1>
+      </div>
+      <div class="bullet-points">
+        <ul style="list-style: none;">
+          <li>API</li>
+          <li>About</li>
+        </ul>
+      </div>
+    </div>
 </nav>
 <div class="container">
     <div class="title">
-        <h1>This is URL Shortener was created with Flask</h1>
+        <h1>This URL Shortener was created with Flask</h1>
     </div>
     {% if message %}
     <div class="message">
@@ -24,12 +35,18 @@
         <button type="submit">Shorten</button>
     </form>
     </div>
+    <hr>
     {% if URL %}
     <div class="url-show">
         <h4>Short</h4>
-        <p><a href="{{ URL.original_url }}" target="_blank">{{ URL.short_url }}</a></p>
+        <p><a href="{{ base_url }}{{ URL.short_url }}" target="_blank">{{ base_url }}{{ URL.short_url }}</a></p>
     </div>
     {% endif %}
+</div>
+<div class="footer">
+  <p><a href="#">@BeGeos</a></p>
+  <div class="sub-footer">
+  </div>
 </div>
 
 </body>

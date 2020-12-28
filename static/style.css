@@ -1,61 +1,113 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Helvetica, sans-serif
+  font-family: Source Sans Pro, sans-serif
 }
 
 .navbar {
-    height: 5em;
-    width: 100%;
-    background: #545B6C;
-    color: white
+  height: 5em;
+  width: 100%;
+  background: #545B6C;
+  color: white;
+  text-align: left;
+  letter-spacing: 4px;
+  display: flex;
+}
+
+.navbar h1 {
+  padding: 5px 25px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.bullet-points {
+  width: 80%;
+  text-align: right;
+  padding: 10px 25px;
 }
 
 .container {
-    margin: 30px 30px;
-    text-align: center
+  margin: 30px 30px;
+  text-align: center
 }
 
 .title {
-    padding: 10px 10px
+  padding: 10px 10px
+}
+
+.form {
+  margin: 1em 1em;
 }
 
 .form form{
-    padding: 25px 25px;
-    height: 50px;
+  padding: 25px 25px;
+  height: 50px;
 }
 
 .form input {
-    padding: 10px 10px;
-    height: 30px;
-    width: 300px;
-    border-radius: 30px;
-    border: 1px solid #545B6C
+  padding: 10px 20px;
+  width: 300px;
+  border-radius: 30px;
+  border: 1px solid #545B6C
 }
 
 .form input:focus {
-    outline: none
+  outline: none
 }
 
 .form button {
-    background: #545B6C;
-    color: white;
-    height: 30px;
-    width: 80px;
-    border-radius: 20px;
-    margin: 10px 15px;
-    border-style: none
+  background: #545B6C;
+  color: white;
+  height: 30px;
+  width: 80px;
+  border-radius: 20px;
+  margin: 10px 15px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.form button:focus {
+  outline: none;
 }
 
 .url-show {
-    margin: 3em 3em;
-    line-height: 1.6em
+  margin: 3em 3em;
+  line-height: 1.6em
 }
 
 .url-show a {
-    color: blue;
-    text-decoration: none
+  color: blue;
+  text-decoration: none
+}
+
+.footer {
+  height: 6em;
+  width: 100%;
+  background: #6c7896;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
+
+.footer p{
+  font-size: 15px;
+  padding-top: 5px;
+}
+
+.sub-footer {
+  height: 4em;
+  width: 100%;
+  background: #545B6C;
+  position: fixed;
+  bottom: 0
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
