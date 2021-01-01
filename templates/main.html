@@ -14,21 +14,22 @@
       </div>
       <div class="bullet-points">
         <ul style="list-style: none;">
-          <li>API</li>
-          <li>About</li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">About</a></li>
         </ul>
       </div>
+        <a href="#" class="contact-nav">Contact</a>
     </div>
 </nav>
+{% if message %}
+    <div class="message">
+        <h4>{{ message }}</h4>
+    </div>
+{% endif %}
 <div class="container">
     <div class="title">
         <h1>This URL Shortener was created with Flask</h1>
     </div>
-    {% if message %}
-    <div class="message">
-        <h4>{{ message }}</h4>
-    </div>
-    {% endif %}
     <div class="form">
         <form action="/" method="post">
         <input type="text" placeholder="Type a URL" name="url" autocomplete="off"><br>
@@ -44,7 +45,7 @@
     {% endif %}
 </div>
 <div class="footer">
-  <p><a href="#">@BeGeos</a></p>
+  <p><a href="https://github.com/BeGeos" target="_blank">@BeGeos</a></p>
   <div class="sub-footer">
   </div>
 </div>

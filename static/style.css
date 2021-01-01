@@ -24,9 +24,39 @@ body {
 }
 
 .bullet-points {
+  display: flex;
   width: 80%;
-  text-align: right;
+  justify-content: flex-end;
+  align-items: center;
   padding: 10px 25px;
+}
+
+.bullet-points li {
+  display: inline-block;
+  padding: 8px
+}
+
+.bullet-points a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-nav {
+  margin: 1.5em 2em;
+  padding: 5px 20px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(117, 211, 111, 1);
+  border: none;
+  color: white;
+  font-family: inherit;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.contact-nav:hover {
+  background: rgba(117, 211, 111, 0.6);
+  transition: all 0.2s ease-in-out;
 }
 
 .container {
@@ -69,6 +99,11 @@ body {
   cursor: pointer;
 }
 
+.form button:hover {
+  background: #393d47;
+  transition: all 0.2s ease-in-out;
+}
+
 .form button:focus {
   outline: none;
 }
@@ -81,6 +116,21 @@ body {
 .url-show a {
   color: blue;
   text-decoration: none
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  height: 3em;
+  margin: 5px 1em;
+  background: rgba(250, 2, 2, 0.5);
+  border-radius: 5px;
+  color: black;
+  transition: 0.3s ease-in
+}
+
+.message h4 {
+  padding: 10px
 }
 
 .footer {
